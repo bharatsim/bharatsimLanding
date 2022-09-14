@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bharatsimLanding/precache-manifest.a06298d7f92e394f75841361f7b00da8.js"
+  "/bharatsimLanding/precache-manifest.07c3c391bc35c81b29456586222559cb.js"
 );
 
 self.addEventListener('message', (event) => {
