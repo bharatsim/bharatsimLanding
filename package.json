@@ -1,6 +1,7 @@
 {
   "name": "chakra-landing-page-part-1",
   "version": "1.0.0",
+  "homepage": "https://bharatsim.github.io",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
@@ -16,9 +17,12 @@
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "typescript": "3.8.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
