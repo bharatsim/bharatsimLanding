@@ -49,7 +49,7 @@ function VizEngine() {
 
             <Box p={2} m={2} backgroundColor='white'>
             <Center>
-              <Image width="30%" ml="7%"mr="7%" pt="5%" pb="5%" src={require("../assets/mumbai.gif")}></Image>
+              <Image width="30%" ml="7%"mr="7%" pt="5%" pb="5%" src={require("../assets/components_viz_mumbai.gif")}></Image>
               </Center>
             </Box>
             </Text>
@@ -78,7 +78,7 @@ function VizEngine() {
               Simulation Engine
             </Button>
           </InnerLink>
-          
+
           <Spacer></Spacer>
 
           <InnerLink to='/synthetic_population'>
@@ -90,7 +90,7 @@ function VizEngine() {
 
         </Container>
         </Center>
- 
+
    </>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import theme from '../theme.js';
 import Header from '../components/sections/Header.js';
- 
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AiOutlineArrowLeft,AiOutlineArrowRight } from "react-icons/ai";
 import {
@@ -59,7 +59,7 @@ function SimulationEngine() {
 
             <Box p={2} m={2} backgroundColor='white'>
             <Center>
-              <Image width="70%" ml="7%"mr="7%" pt="4%" pb="4%" src={require("../assets/graph.png")}></Image>
+              <Image width="70%" ml="7%"mr="7%" pt="4%" pb="4%" src={require("../assets/components_se_graph.png")}></Image>
             </Center>
             </Box>
 
@@ -70,7 +70,7 @@ function SimulationEngine() {
 
             <Box p={2} m={2} backgroundColor='white'>
             <Center>
-              <Image width="70%" ml="7%"mr="7%" pt="4%" pb="4%" src={require("../assets/nodes.png")}></Image>
+              <Image width="70%" ml="7%"mr="7%" pt="4%" pb="4%" src={require("../assets/components_se_nodes.png")}></Image>
             </Center>
             </Box>
 
@@ -80,7 +80,7 @@ function SimulationEngine() {
 
             <Box p={2} m={2} backgroundColor='white'>
             <Center>
-              <Image width="70%" ml="7%"mr="7%" pt="4%" pb="4%" src={require("../assets/relations.png")}></Image>
+              <Image width="70%" ml="7%"mr="7%" pt="4%" pb="4%" src={require("../assets/components_se_relations.png")}></Image>
             </Center>
             </Box>
 
@@ -99,7 +99,7 @@ function SimulationEngine() {
 
           <Box p={2} m={2} backgroundColor='white'>
           <Center>
-            <Image width="60%" ml="7%"mr="7%" pt="5%" pb="5%" src={require("../assets/person.png")}></Image>
+            <Image width="60%" ml="7%"mr="7%" pt="5%" pb="5%" src={require("../assets/components_se_person.png")}></Image>
           </Center>
           </Box>
 
@@ -115,7 +115,7 @@ function SimulationEngine() {
 
             <Box p={2} m={2} backgroundColor='white'>
             <Center>
-              <Image width="70%" ml="7%"mr="7%" pt="5%" pb="5%" src={require("../assets/schedules.png")}>
+              <Image width="70%" ml="7%"mr="7%" pt="5%" pb="5%" src={require("../assets/components_se_schedules.png")}>
               </Image>
               </Center>
             </Box>
@@ -130,10 +130,10 @@ function SimulationEngine() {
         <Flex  p={4} mb={2}>
         <InnerLink to='/synthetic_population'>
         <Button leftIcon={<AiOutlineArrowLeft/>}>
-            Synthetic Population    
+            Synthetic Population
             </Button>
           </InnerLink>
-          
+
           <Spacer></Spacer>
 
           <InnerLink to='/viz_engine'>

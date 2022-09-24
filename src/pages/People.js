@@ -118,7 +118,7 @@ const People = () => {
 
       <Flex direction="row">
 
-      <ProfileCard name="Gautam Menon" title="Professor of Physics and Biology" img_url="../assets/people/au_gautam_menon.jpg" email="gautam.menon@ashoka.edu.in"/>
+      <ProfileCard name="Gautam Menon" title="Professor of Physics and Biology" img_url={require('../assets/people/au_gautam_menon.jpg')} email="gautam.menon@ashoka.edu.in"/>
       <ProfileCard name="Debayan Gupta" title="Assistant Professor of Computer Science" img_url={require('../assets/people/au_debayan_gupta.jpg')} email="debayan.gupta@ashoka.edu.in"/>
       <ProfileCard name="Bhavesh Neekhra" title="Graduate Student, Computer Science" img_url={require('../assets/people/au_bhavesh_neekhra.jpg')} email="bhavesh.neekhra_phd18@ashoka.edu.in"/>
       <ProfileCard name="Philip Cherian" title="Graduate Student, Physics" img_url={require('../assets/people/au_philip_cherian.jpg')} email="philip.cherian@ashoka.edu.in"/>
