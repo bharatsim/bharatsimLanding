@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+
 import {
   ChakraProvider,
   Center,
@@ -51,7 +53,9 @@ import VizEngine from "./pages/VizEngine.js";
 export default function App() {
   return (
     <Router>
-      <Switch>
+             <HashRouter>
+              {/* <Switch> */}
+
 
       <Route path="/people">
           <ChakraProvider theme={theme}>
@@ -74,12 +78,12 @@ export default function App() {
         {/* <Route path="/about">
         <ChakraProvider theme={theme}>
         <div>
-          Hello!
+          Hello!  
         </div>
     </ChakraProvider>
         </Route> */}
 
-        <Route path="/media">
+        <Route path="/publications">
         <ChakraProvider theme={theme}>
         <LandingLayout>
           Work in Progress...
@@ -114,21 +118,23 @@ export default function App() {
         <Footerv2></Footerv2>
       </Route>
 
-      <Route path="/publications">
+      {/* <Route path="/publications">
         <ChakraProvider theme={theme}>
         <Header bg="#392F74" ></Header>
-          {/*<Publications />*/}
+        <Publications 
             <div style={{margin:"auto",width:"50%",paddingLeft:"23vw"}}>
             To be updated
             </div>
-          {/* <Footer /> */}
+           <Footer /> 
           </ChakraProvider>
-        </Route>
+        </Route> */}
 
         <Route path="/">
           <Landing />
         </Route>
-      </Switch>
+      {/* </Switch> */}
+      </HashRouter>
+
     </Router>
   );
 }
