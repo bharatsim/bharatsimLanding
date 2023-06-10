@@ -1,47 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, Flex, Text, Button,Icon,Image, useFocusEffect} from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Button,
+  Icon,
+  Image,
+  useFocusEffect,
+} from "@chakra-ui/react";
 import Logo from "../ui/Logo";
 import ButtonDoc from "../ui/ButtonDoc";
-import { useHistory,useLocation } from "react-router-dom";
-import BharatSimLogo from '../../assets/Logo_color_bg.png';
+import { useHistory, useLocation } from "react-router-dom";
+import BharatSimLogo from "../../assets/Logo_color_bg.png";
 
-const MenuItem = ({ children, isLast, flag,to = "/", ...rest }) => {
-
+const MenuItem = ({ children, isLast, flag, to = "/", ...rest }) => {
   // let location = useLocation();
   // let path = location.pathname.toString().slice(1);
   // console.log('path:   ' ,path);
   // console.log( 'path:' ,path.pathname.toString().slice(1),children.toString().toLowerCase() );
   return (
     <>
-    { flag=='current_tab'? 
-    <Text
-      mb={{ base: isLast ? 0 : 8, sm: 0 }}
-      mr={{ base: 0, sm: isLast ? 0 : 8 }}
-      display="block"
-      {...rest}
-      borderBottom={"2px"}
-      borderBottomColor={'white'}  
-    >
-  
-      <Link to={to}>{children}</Link> </Text>
-
-      : 
-      <Text
-      mb={{ base: isLast ? 0 : 8, sm: 0 }}
-      mr={{ base: 0, sm: isLast ? 0 : 8 }}
-      display="block"
-      {...rest}
-    >
-  
-      <Link to={to}>{children}</Link>
-      </Text>
-     }
-
-
-     </>
-      
-   
+      {flag == "current_tab" ? (
+        <Text
+          mb={{ base: isLast ? 0 : 8, sm: 0 }}
+          mr={{ base: 0, sm: isLast ? 0 : 8 }}
+          display="block"
+          {...rest}
+          borderBottom={"2px"}
+          borderBottomColor={"white"}
+        >
+          <Link to={to}>{children}</Link>{" "}
+        </Text>
+      ) : (
+        <Text
+          mb={{ base: isLast ? 0 : 8, sm: 0 }}
+          mr={{ base: 0, sm: isLast ? 0 : 8 }}
+          display="block"
+          {...rest}
+        >
+          <Link to={to}>{children}</Link>
+        </Text>
+      )}
+    </>
   );
 };
 
@@ -53,13 +54,12 @@ const MenuItemUrl = ({ children, isLast, to = "/", ...rest }) => {
       display="block"
       {...rest}
     >
-      <Link href={to} isExternal>{children}</Link>
-
+      <Link href={to} isExternal>
+        {children}
+      </Link>
     </Text>
   );
 };
-
-
 
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -88,15 +88,14 @@ const Header = (props) => {
   const toggleMenu = () => setShow(!show);
 
   const history = useHistory();
-  const handleRoute = () =>{
+  const handleRoute = () => {
     history.push("/about");
-  }
+  };
 
-  const [loc,updateLoc] = React.useState('');
+  const [loc, updateLoc] = React.useState("");
   let location = useLocation();
   //write a useffect
 
- 
   // let path = location.pathname.toString().slice(1);
   //   return () => {
   //     console.log('useEffect return');
@@ -108,92 +107,139 @@ const Header = (props) => {
 
   return (
     <>
-    {location &&
-    <Flex
-      as="nav"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
-      w="100%"
-      mb={8}
-      p={2}
-      bg={["primary.500", "primary.500", "transparent", "transparent"]}
-      color={["white", "white", "primary.700", "primary.700"]}
-      {...props}
-    >
-      <Flex align="start">
-        {/* <Logo
+      {location && (
+        <Flex
+          as="nav"
+          align="center"
+          justify="space-between"
+          wrap="wrap"
+          w="100%"
+          mb={8}
+          p={2}
+          bg={["primary.500", "primary.500", "transparent", "transparent"]}
+          color={["white", "white", "primary.700", "primary.700"]}
+          {...props}
+        >
+          <Flex align="start">
+            {/* <Logo
           w="100px"
           color={["white", "white", "primary.500", "primary.500"]}
         />
      */}
-         <Link  m={-3}
-                p={3}to="/">
-                  <Box size='sm'>
-                    <Image width='250px' src={BharatSimLogo}></Image>
-                  </Box>
-                </Link>
-      </Flex>
+            <Link m={-3} p={3} to="/">
+              <Box size="sm">
+                <Image width="250px" src={BharatSimLogo}></Image>
+              </Box>
+            </Link>
+          </Flex>
 
-      <Box display={{ base: "block", md: "none" }} onClick={toggleMenu}>
-        {show ? <CloseIcon /> : <MenuIcon />}
-      </Box>
+          <Box display={{ base: "block", md: "none" }} onClick={toggleMenu}>
+            {show ? <CloseIcon /> : <MenuIcon />}
+          </Box>
 
-      <Box
-        display={{ base: show ? "block" : "none", md: "block" }}
-        flexBasis={{ base: "100%", md: "auto" }}
-      >
-        <Flex
-          align="center"
-          justify={["center", "space-between", "flex-end", "flex-end"]}
-          direction={["column", "row", "row", "row"]}
-          pt={[4, 4, 0, 0]}
-        >
-
-          { location.pathname.toString()==='/' ?
-          <MenuItem to="/" flag={'current_tab'}> Home</MenuItem> 
-          : <><MenuItem to="/" flag={''}>  Home</MenuItem></> 
-        }
-          {/* <MenuItem to="/about">About </MenuItem> */}
-
-          { (location.pathname.toString()==='/components' || location.pathname.toString()==='/simulation_engine' || location.pathname.toString()==='/viz_engine' || location.pathname.toString()==='/synthetic_population') ?
-          <MenuItem to="/components" flag={'current_tab'}> Components </MenuItem> :
-          <><MenuItem to="/components" flag={''}> Components </MenuItem></>
-          }
-
-          {/* <MenuItem to="/collaborations"> Collaborations </MenuItem> */}
-          <MenuItem to="/publications"> Publications </MenuItem> 
-
-          { location.pathname.toString()==='/people' ?
-          <MenuItem to="/people" flag={'current_tab'}> People </MenuItem>
-           : <MenuItem to="/people" flag={''}> People </MenuItem>
-        } 
-
-          {/* <MenuItem to="/media"> Media </MenuItem> */}
-          {/* <MenuItem to="/"> FAQ </MenuItem> */}
-          <MenuItemUrl to="https://documentation.com" isLast>
-          {/* <ButtonDoc></ButtonDoc> */}
-          {/* 363c46 alt button color */}
-          <a href='https://bharatsim.readthedocs.io' target="_blank">
-            <Button
-              size="md"
-              rounded="md"
-              color={["primary.500", "primary.500", "white", "white"]}
-              bg={["#2D3748", "#2D3748", "primary.500", "primary.500"]}
-              _hover={{
-                bg: ["primary.600", "primary.100", "primary.600", "primary.600"]
-              }}
-              onClick={()=> window.open("https://bharatsim.readthedocs.io", "_blank")}
+          <Box
+            display={{ base: show ? "block" : "none", md: "block" }}
+            flexBasis={{ base: "100%", md: "auto" }}
+          >
+            <Flex
+              align="center"
+              justify={["center", "space-between", "flex-end", "flex-end"]}
+              direction={["column", "row", "row", "row"]}
+              pt={[4, 4, 0, 0]}
             >
-                    Documentation
-            </Button></a>
+              {location.pathname.toString() === "/" ? (
+                <MenuItem to="/" flag={"current_tab"}>
+                  {" "}
+                  Home
+                </MenuItem>
+              ) : (
+                <>
+                  <MenuItem to="/" flag={""}>
+                    {" "}
+                    Home
+                  </MenuItem>
+                </>
+              )}
+              {/* <MenuItem to="/about">About </MenuItem> */}
 
-          </MenuItemUrl>
+              {location.pathname.toString() === "/components" ||
+              location.pathname.toString() === "/simulation_engine" ||
+              location.pathname.toString() === "/viz_engine" ||
+              location.pathname.toString() === "/synthetic_population" ? (
+                <MenuItem to="/components" flag={"current_tab"}>
+                  {" "}
+                  Components{" "}
+                </MenuItem>
+              ) : (
+                <>
+                  <MenuItem to="/components" flag={""}>
+                    {" "}
+                    Components{" "}
+                  </MenuItem>
+                </>
+              )}
+
+              {/* <MenuItem to="/collaborations"> Collaborations </MenuItem> */}
+              {location.pathname.toString() === "/publications" ? (
+                <MenuItem to="/publications" flag={"current_tab"}>
+                  Publications
+                </MenuItem>
+              ) : (
+                <MenuItem to="/publications">Publications</MenuItem>
+              )}
+              {/* {location.pathname.toString() === "/publication" ? (
+                <MenuItem to="/publication" flag={"current_tab"}>
+                  Publications
+                </MenuItem>
+              ) : (
+                <MenuItem to="/publication" flag={""}>
+                  Publications
+                </MenuItem>
+              )} */}
+              {location.pathname.toString() === "/people" ? (
+                <MenuItem to="/people" flag={"current_tab"}>
+                  {" "}
+                  People{" "}
+                </MenuItem>
+              ) : (
+                <MenuItem to="/people" flag={""}>
+                  {" "}
+                  People{" "}
+                </MenuItem>
+              )}
+
+              {/* <MenuItem to="/media"> Media </MenuItem> */}
+              {/* <MenuItem to="/"> FAQ </MenuItem> */}
+              <MenuItemUrl to="https://documentation.com" isLast>
+                {/* <ButtonDoc></ButtonDoc> */}
+                {/* 363c46 alt button color */}
+                <a href="https://bharatsim.readthedocs.io" target="_blank">
+                  <Button
+                    size="md"
+                    rounded="md"
+                    color={["primary.500", "primary.500", "white", "white"]}
+                    bg={["#2D3748", "#2D3748", "primary.500", "primary.500"]}
+                    _hover={{
+                      bg: [
+                        "primary.600",
+                        "primary.100",
+                        "primary.600",
+                        "primary.600",
+                      ],
+                    }}
+                    onClick={() =>
+                      window.open("https://bharatsim.readthedocs.io", "_blank")
+                    }
+                  >
+                    Documentation
+                  </Button>
+                </a>
+              </MenuItemUrl>
+            </Flex>
+          </Box>
         </Flex>
-      </Box>
-    </Flex>
-  }
-  </>
+      )}
+    </>
   );
 };
 

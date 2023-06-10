@@ -11,7 +11,7 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 import "./LandingHero.css";
 
@@ -25,56 +25,99 @@ export default function CallToActionWithAnnotation() {
         />
       </Head> */}
 
-      <Container maxW='3xl'>
+      <Container maxW="3xl">
         <Stack
           as={Box}
-          textAlign={'center'}
+          textAlign={"center"}
           spacing={{ base: 8, md: 5 }}
-          py={{ base: 5, md: 30 }}>
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}
-              lineHeight={'110%'}
-              fontFamily="Lato"
-              id="LandingTitle">
-              <Text as={'span'} color={'#2D3748'}>
-                BharatSim
-              </Text>
-            </Heading>
+          py={{ base: 5, md: 30 }}
+        >
+          <Heading
+            fontWeight={600}
+            fontSize={{ base: "xl", sm: "3xl", md: "4xl" }}
+            lineHeight={"110%"}
+            fontFamily="Lato"
+            id="LandingTitle"
+          >
+            <Text as={"span"} color={"#2D3748"}>
+              BharatSim
+            </Text>
+          </Heading>
 
-          <Text color={'white.500'} p={1} fontWeight={300} fontSize='xl' fontFamily="Inter" textAlign='justify'>
-           {/* <span style={{color:"#9CAAC5",fontWeight:"600"}}>*/}  <span style={{color:"#2D3748",fontWeight:"600"}}> BharatSim</span>  is a open-source collaborative project between <span style={{color:"#2D3748",fontWeight:"600"}}> Ashoka University </span> and <span style={{color:"#2D3748",fontWeight:"600"}}> Thoughtworks</span>, funded by the <span style={{color:"#2D3748",fontWeight:"600"}}>Bill & Melinda Gates Foundation</span> and <span style={{color:"#2D3748",fontWeight:"600"}}>Mphasis</span>.<br/><br/>
-
-           BharatSim provides a distributed, multi-scale, simulation framework for agent-based models. It was originally designed to model the epidemiological dynamics of the COVID-19 pandemic in India, including the social determinants of disease.   BharatSim is easily extended to describe other communicable as well as non-communicable diseases.<br/><br/>
-
-           BharatSim is versatile. In addition to disease modelling, it may be used to study a wide range of social phenomena.<br/><br/>
-
+          <Text
+            color={"white.500"}
+            p={1}
+            fontWeight={300}
+            fontSize="xl"
+            fontFamily="Inter"
+            textAlign="justify"
+          >
+            {/* <span style={{color:"#9CAAC5",fontWeight:"600"}}>*/}{" "}
+            <span style={{ color: "#2D3748", fontWeight: "600" }}>
+              {" "}
+              BharatSim
+            </span>{" "}
+            is a open-source collaborative project between{" "}
+            <span style={{ color: "#2D3748", fontWeight: "600" }}>
+              {" "}
+              Ashoka University{" "}
+            </span>{" "}
+            and{" "}
+            <span style={{ color: "#2D3748", fontWeight: "600" }}>
+              {" "}
+              Thoughtworks
+            </span>
+            , funded by the{" "}
+            <span style={{ color: "#2D3748", fontWeight: "600" }}>
+              Bill & Melinda Gates Foundation
+            </span>{" "}
+            and{" "}
+            <span style={{ color: "#2D3748", fontWeight: "600" }}>Mphasis</span>
+            .<br />
+            <br />
+            BharatSim provides a distributed, multi-scale, simulation framework
+            for agent-based models. It was originally designed to model the
+            epidemiological dynamics of the COVID-19 pandemic in India,
+            including the social determinants of disease. BharatSim is easily
+            extended to describe other communicable as well as non-communicable
+            diseases.
+            <br />
+            <br />
+            BharatSim is versatile. In addition to disease modelling, it may be
+            used to study a wide range of social phenomena.
+            <br />
+            <br />
           </Text>
           <Stack
-            direction={'row'}
+            direction={"row"}
             spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}>
+            align={"center"}
+            alignSelf={"center"}
+            position={"relative"}
+          >
             <Button
-              colorScheme={'blue'}
-              bg={'#2D3748'}
-              rounded={'full'}
+              colorScheme={"blue"}
+              bg={"#2D3748"}
+              rounded={"full"}
               px={6}
               _hover={{
-                bg: 'primary',
-              }}>
-             <Link to="/components"> Get Started </Link>
+                bg: "primary",
+              }}
+            >
+              <Link to="/components"> Get Started </Link>
             </Button>
             <Button
-              colorScheme={'blue'}
-              bg={'#00c0b5ff'}
-              rounded={'full'}
+              colorScheme={"blue"}
+              bg={"#00c0b5ff"}
+              rounded={"full"}
               px={6}
               _hover={{
-                bg: 'primary',
+                bg: "primary",
               }}
-              onClick={()=> window.open("https://github.com/debayanLab/BharatSim", "_blank")}>
+              onClick={() =>
+                window.open("https://github.com/debayanLab/BharatSim", "_blank")
+              }
+            >
               GitHub
             </Button>
 
@@ -89,8 +132,8 @@ export default function CallToActionWithAnnotation() {
 }
 
 const Arrow = createIcon({
-  displayName: 'Arrow',
-  viewBox: '0 0 72 24',
+  displayName: "Arrow",
+  viewBox: "0 0 72 24",
   path: (
     <path
       fillRule="evenodd"

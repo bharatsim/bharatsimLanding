@@ -14,7 +14,6 @@ export default function LandingLayout(props) {
     >
       <Header bg="#392F74" />
       {props.children}
-
     </Flex>
   );
 }
