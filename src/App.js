@@ -98,17 +98,12 @@ export default function App() {
                       {` BharatSim `}
                     </span>
                     {`in your research and want to cite it,
-                  please use this reference: Cherian, P., Kshirsagar,
-                  J.,Neekhra, B., Deshkar, G., Hayatnagarkar, H., Kapoor, K.,
-                  Kaski, C., Kathar, G., Khandekar, S., Mookherjee, S., Ninawe,
-                  P., Noronha, R. F., Ranka, P., Sinha, V., Vinod, T., Yadav,
-                  C., Gupta, D., Menon, G. I. (2023).`}
-                    <br />
-                    <br />
-                    <span style={{ color: "#2D3748", fontWeight: "600" }}>
-                      {` BharatSim: `}
-                    </span>
-                    {`An agent-based modelling framework for India. (Manuscript in preparation.)`}
+                  please use this reference:`}
+                  <br/>
+                  <br/>
+                  {`Cherian, P., Kshirsagar, J.,Neekhra, B., Deshkar, G., Hayatnagarkar, H., Kapoor, K.,
+                  Kaski, C., Kathar, G., Khandekar, S., Mookherjee, S., Ninawe, P., Noronha, R. F., Ranka, P., Sinha, V., Vinod, T., Yadav,
+                  C., Gupta, D., Menon, G. I. (2023).`} <i>BharatSim: An agent-based modelling framework for India</i>. {`(Manuscript in preparation.)`}
                     <br />
                   </Text>
                 </Stack>

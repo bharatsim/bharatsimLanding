@@ -64,19 +64,19 @@ export const peopleData = [
     ],
   },
   {
-    title: " PAST MEMBERS",
+    title: "Past Members",
     peoples: [
       {
         name: "Riz Fernando Noronha",
-        affiliation: "Research Intern, Ashoka University",
+        affiliation: "Research Assistant, Ashoka University",
         photo: "/people/au_riz_noronha.png",
-        email: "examle@ashoka.edu.in",
+        email: "",
       },
       {
         name: "Vaibhhav Sinha",
         affiliation: "Research Assistant, Ashoka University",
         photo: "",
-        email: "examle@ashoka.edu.in",
+        email: "",
       },
     ],
   },
