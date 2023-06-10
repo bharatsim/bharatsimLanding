@@ -44,49 +44,14 @@ export default function CallToActionWithAnnotation() {
             </Text>
           </Heading>
 
-          <Text
-            color={"white.500"}
-            p={1}
-            fontWeight={300}
-            fontSize="xl"
-            fontFamily="Inter"
-            textAlign="justify"
-          >
-            {/* <span style={{color:"#9CAAC5",fontWeight:"600"}}>*/}{" "}
-            <span style={{ color: "#2D3748", fontWeight: "600" }}>
-              {" "}
-              BharatSim
-            </span>{" "}
-            is a open-source collaborative project between{" "}
-            <span style={{ color: "#2D3748", fontWeight: "600" }}>
-              {" "}
-              Ashoka University{" "}
-            </span>{" "}
-            and{" "}
-            <span style={{ color: "#2D3748", fontWeight: "600" }}>
-              {" "}
-              Thoughtworks
-            </span>
-            , funded by the{" "}
-            <span style={{ color: "#2D3748", fontWeight: "600" }}>
-              Bill & Melinda Gates Foundation
-            </span>{" "}
-            and{" "}
-            <span style={{ color: "#2D3748", fontWeight: "600" }}>Mphasis</span>
-            .<br />
-            <br />
-            BharatSim provides a distributed, multi-scale, simulation framework
-            for agent-based models. It was originally designed to model the
-            epidemiological dynamics of the COVID-19 pandemic in India,
-            including the social determinants of disease. BharatSim is easily
-            extended to describe other communicable as well as non-communicable
-            diseases.
-            <br />
-            <br />
-            BharatSim is versatile. In addition to disease modelling, it may be
-            used to study a wide range of social phenomena.
-            <br />
-            <br />
+          <Text color={'white.500'} p={1} fontWeight={300} fontSize='xl' fontFamily="Inter" textAlign='justify'>
+           {/* <span style={{color:"#9CAAC5",fontWeight:"600"}}>*/}  <span style={{color:"#2D3748",fontWeight:"600"}}> BharatSim</span>  is an open-source collaborative project between <span style={{color:"#2D3748",fontWeight:"600"}}> Ashoka University </span> and <span style={{color:"#2D3748",fontWeight:"600"}}> Thoughtworks</span>, funded by the <span style={{color:"#2D3748",fontWeight:"600"}}>Bill & Melinda Gates Foundation</span>.
+
+           The ongoing development of BharatSim at Ashoka University is funded by the <span style={{color:"#2D3748",fontWeight:"600"}}>Mphasis F1 Foundation</span>.<br/><br/>
+
+           BharatSim provides a distributed, multi-scale simulation framework for agent-based models. It was originally designed to model the epidemiological dynamics of the COVID-19 pandemic in India, including the social determinants of disease. BharatSim is easily extended to describe other communicable as well as non-communicable diseases.<br/><br/>
+
+           BharatSim is versatile. In addition to disease modelling, it may be used to study a wide range of social phenomena.<br/><br/>
           </Text>
           <Stack
             direction={"row"}
@@ -114,10 +79,7 @@ export default function CallToActionWithAnnotation() {
               _hover={{
                 bg: "primary",
               }}
-              onClick={() =>
-                window.open("https://github.com/debayanLab/BharatSim", "_blank")
-              }
-            >
+              onClick={()=> window.open("https://github.com/bharatsim/BharatSim-public", "_blank")}>
               GitHub
             </Button>
 
