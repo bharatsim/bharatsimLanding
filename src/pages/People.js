@@ -25,7 +25,7 @@ const People = () => {
               {obj.title}
             </Text>
           </Center>
-          <Wrap justify="center">
+          <Wrap justify="center" maxW='1500px' p = 'auto' m = 'auto'>
             {obj?.peoples?.map((people) => (
               <WrapItem>
                 <Center>
