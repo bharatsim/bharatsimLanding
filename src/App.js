@@ -101,9 +101,7 @@ export default function App() {
                   please use this reference:`}
                   <br/>
                   <br/>
-                  {`Cherian, P., Kshirsagar, J.,Neekhra, B., Deshkar, G., Hayatnagarkar, H., Kapoor, K.,
-                  Kaski, C., Kathar, G., Khandekar, S., Mookherjee, S., Ninawe, P., Noronha, R. F., Ranka, P., Sinha, V., Vinod, T., Yadav,
-                  C., Gupta, D., Menon, G. I. (2023).`} <i>BharatSim: An agent-based modelling framework for India</i>. {`(Manuscript in preparation.)`}
+                  {`Cherian, P., Kshirsagar, J., Neekhra, B., Deshkar, G., Hayatnagarkar, H., Kapoor, K., Kaski, C., Kathar, G., Khandekar, S., Mookherje, S., Ninawe, P., Noronha, R. F., Ranka, P., Sinha, V., Vinod, T., Yadav, C., Gupta, D., & Menon, G. I. (2023).`} <i>BharatSim: An agent-based modelling framework for India</i>. MedRxiv. <a href="https://doi.org/10.1101/2023.06.15.23291292" style={{ color: "#0000FF" }}>https://doi.org/10.1101/2023.06.15.23291292</a>.
                     <br />
                   </Text>
                 </Stack>

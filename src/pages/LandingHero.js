@@ -79,7 +79,7 @@ export default function CallToActionWithAnnotation() {
               _hover={{
                 bg: "primary",
               }}
-              onClick={()=> window.open("https://github.com/bharatsim/BharatSim-public", "_blank")}>
+              onClick={()=> window.open("https://github.com/bharatsim/", "_blank")}>
               GitHub
             </Button>
 
